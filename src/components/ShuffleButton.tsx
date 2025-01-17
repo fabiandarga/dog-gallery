@@ -1,9 +1,11 @@
+import { Button } from "./ui/button";
+
 type ShuffleButtonProps = {
   onClick: () => void;
 };
 
 export default function ShuffleButton( { onClick }: ShuffleButtonProps) {
   return (
-    <button type="button" className="px-10 py-5 bg-[#3DA4F8]" onClick={onClick}>Shuffle</button>
+    <Button type="button" className="px-10 py-5" onClick={onClick}>Shuffle</Button>
   );
 }

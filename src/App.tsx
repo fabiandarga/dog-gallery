@@ -7,6 +7,14 @@ import ShuffleButton from './components/ShuffleButton';
 
 const IMAGE_BY_BREED_URL = 'https://dog.ceo/api/breed/:breed/images/random';
 
+type Response = {
+  //message: {
+  // [key: string]: string[]
+  //}
+  message: Record<string, string[]>;
+};
+
+
 async function fetchBreedImage(breed: string) {
   const res = await fetch(IMAGE_BY_BREED_URL.replace(':breed', breed));
   const data = await res.json();
@@ -34,7 +42,7 @@ function App() {
   }
 
   return (
-    <>
+    <div className="flex flex-col w-full h-svh justify-center items-center">
       <div className="mb-4">
         <BreedSelector onChange={handleBreedChange}/>
       </div>
@@ -44,7 +52,7 @@ function App() {
       <div>
         <ShuffleButton onClick={handleShuffleClick} />
       </div>
-    </>
+    </div>
   )
 }
 
