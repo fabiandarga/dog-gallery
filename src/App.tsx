@@ -7,13 +7,6 @@ import ShuffleButton from './components/ShuffleButton';
 
 const IMAGE_BY_BREED_URL = 'https://dog.ceo/api/breed/:breed/images/random';
 
-type Response = {
-  //message: {
-  // [key: string]: string[]
-  //}
-  message: Record<string, string[]>;
-};
-
 
 async function fetchBreedImage(breed: string) {
   const res = await fetch(IMAGE_BY_BREED_URL.replace(':breed', breed));
@@ -25,7 +18,7 @@ function App() {
   const queryClient = useQueryClient();
   const [selectedBreed, setSelectedBreed] = useState('');
 
-  const { data, isLoading } = useQuery({ 
+  const { data } = useQuery({ 
     queryKey: ['image', selectedBreed], 
     queryFn: () => fetchBreedImage(selectedBreed)
   });
