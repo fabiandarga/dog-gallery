@@ -1,12 +1,12 @@
 {
   "ignoreMatches": [
-    "@babel/*",  // Ignore all babel packages
-    "webpack-*", // Ignore webpack related packages
+    "@babel/*",
+    "webpack-*",
     "autoprefixer",
     "postcss"
   ],
   "specials": [
-    "babel",  // Parse babel config
-    "webpack" // Parse webpack config
+    "babel",
+    "webpack"
   ]
 }
