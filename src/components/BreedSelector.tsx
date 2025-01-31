@@ -48,7 +48,7 @@ export default function BreedSelector({ onChange }: BreedSelectorProps)  {
     { isLoading
       ? (<p className="animate-pulse">Loading...</p>)
       : (
-          <Select onValueChange={setValue} value={ value } className="bg-secondary">
+          <Select onValueChange={setValue} value={ value } >
            <SelectTrigger className="w-[180px]">
             <SelectValue placeholder="Rasse auswählen" />
           </SelectTrigger>
