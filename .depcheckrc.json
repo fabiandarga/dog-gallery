@@ -2,11 +2,11 @@
   "ignoreMatches": [
     "@babel/*",
     "webpack-*",
-    "autoprefixer",
-    "postcss"
   ],
   "specials": [
     "babel",
-    "webpack"
+    "webpack",
+    "postcss",
+    "autoprefixer"
   ]
 }
